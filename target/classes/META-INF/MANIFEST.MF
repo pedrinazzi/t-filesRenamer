@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1416378819188
+Build-Jdk: 1.7.0_71
+Build-Time: 20141119-0733
+Built-By: laurapedrinazzi
+Bundle-Description: Rename files
+Bundle-License: https://www.gnu.org/licenses/lgpl-3.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: T-FilesRenamer
+Bundle-SymbolicName: eu.unifiedviews.plugins.uv-t-filesRenamer
+Bundle-Version: 1.4.0
+Created-By: Apache Maven Bundle Plugin
+DPU-MainClass: Renamer
+DPU-Package: eu.unifiedviews.plugins.transformer.filesrenamer
+Embed-Dependency: *;scope=compile|runtime
+Embed-Directory: dependency
+Embed-StripGroup: false
+Embed-Transitive: false
+Export-Package: eu.unifiedviews.plugins.transformer.filesrenamer;uses:="
+ com.vaadin.ui,org.slf4j,com.vaadin.data,com.vaadin.data.util,eu.unified
+ views.helpers.dpu.config,eu.unifiedviews.dpu.config,eu.unifiedviews.dat
+ aunit.files,eu.unifiedviews.dpu,eu.unifiedviews.helpers.dpu,eu.unifiedv
+ iews.helpers.dataunit.fileshelper,eu.unifiedviews.helpers.dataunit.virt
+ ualpathhelper,eu.unifiedviews.dataunit";version="1.4.0"
+Import-Package: com.vaadin.data;version="[7.1,8)",com.vaadin.data.util;v
+ ersion="[7.1,8)",com.vaadin.ui;version="[7.1,8)",eu.unifiedviews.dataun
+ it;version="[1.0,2)",eu.unifiedviews.dataunit.files;version="[1.0,2)",e
+ u.unifiedviews.dpu;version="[1.0,2)",eu.unifiedviews.dpu.config;version
+ ="[1.0,2)",eu.unifiedviews.helpers.dataunit.fileshelper;version="[1.0,2
+ )",eu.unifiedviews.helpers.dataunit.virtualpathhelper;version="[1.0,2)"
+ ,eu.unifiedviews.helpers.dpu;version="[1.0,2)",eu.unifiedviews.helpers.
+ dpu.config;version="[1.0,2)",org.slf4j;version="[1.7,2)"
+Tool: Bnd-1.50.0
