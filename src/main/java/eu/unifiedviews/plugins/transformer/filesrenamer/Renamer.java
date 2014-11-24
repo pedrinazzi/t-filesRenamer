@@ -69,26 +69,31 @@ public class Renamer extends NonConfigurableBase {
                     entry = filesIteration.next();
                     index++;
 
+                   
                     final String newSymbolicName = entry.getSymbolicName() + ".ttl";
                     
 
-                    //to get the current date:
+                        //Get the current date:
 						DateFormat dateFormat = new SimpleDateFormat("yyMMdd");
 						Date date = new Date();
                    
-						/*
-						 * 
+						/*						
 						 *please consider  the following rules
 						[N].ttl             changes extension to ttl
 						[N].[E].ttl        add extension .ttl
 						abc_[N].[E]       prefixes filename with abc_
 						[N]-[YMD].[E] changes filename into form of name-date.extension
 
-                   */
+                        */
 						
 						
                  final String newVirtualPath
-                         = virtualPathHelperInput.getVirtualPath(entry.getSymbolicName()) + dateFormat.format(date)+ ".ttl";
+                         = virtualPathHelperInput.getVirtualPath(entry.getSymbolicName())+"_"+ dateFormat.format(date)+ ".ttl";
+
+                 
+                 
+                     String checkName= " new name:   " +  virtualPathHelperInput.getVirtualPath(entry.getSymbolicName())+"_"+ dateFormat.format(date)+ ".ttl";
+                     dpuContext.sendMessage(DPUContext.MessageType.INFO, checkName, "");
 
                     //final String newVirtualPath = virtualPathHelperInput.getVirtualPath(entry.getSymbolicName()) + ".ttl";
 
